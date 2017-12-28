@@ -166,7 +166,7 @@ int main()
 	}
 	else if(shape=='X'&&Winner)
 		printf("Player O wins!\n");
-	else
+	else if (isfull())
 		printf("It's a tie!\n");
 	system("pause");
 	return 0;
