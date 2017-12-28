@@ -1,7 +1,7 @@
 #include <stdbool.h>
 
 
-#define STACK_MAX 6*7
+#define MAXSIZE 6*7
 
 typedef struct Stack Stack;
 

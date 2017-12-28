@@ -3,8 +3,7 @@
 #include <stdbool.h>
 #include "Stack.h"
 
-int MAXSIZE = 42;
-int stack[42];
+int stack[MAXSIZE];
 int top = -1;
 
 int isempty() {
@@ -16,8 +15,7 @@ int isempty() {
 }
 
 bool isfull() {
-
-	if(top == MAXSIZE)
+	if(top == MAXSIZE-1)
 		return true;
 	else
 		return false;

@@ -117,7 +117,7 @@ int main()
 	bool Winner = false;
 	printf("Welcome!\n");
 	PrintBoard();
-	while(Winner!=true&&!(isfull())&&legal==true)
+	while((Winner!=true)&&(!isfull())&&(legal==true))
 	{
 		printf("Player %c, please enter a column number (or 0 to undo)\n", shape);
 		if(scanf("%d", &chose)!=1)
@@ -151,6 +151,7 @@ int main()
 				check(chose);
 				PrintBoard();
 				Winner=CheckWin();
+
 				if(shape=='X')
 					shape='O';
 				else
@@ -158,15 +159,15 @@ int main()
 			}
 		}
 	}
-	if(isfull())
-		printf("It's a tie!");
-	else if(shape=='O'&&Winner)
+
+	if(shape=='O'&&Winner)
 	{
 		printf("Player X wins!\n");
 	}
 	else if(shape=='X'&&Winner)
 		printf("Player O wins!\n");
-
+	else
+		printf("It's a tie!\n");
 	system("pause");
 	return 0;
 }
